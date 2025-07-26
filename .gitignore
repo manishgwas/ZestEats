@@ -1,0 +1,51 @@
+# .gitignore for ZestEats (.NET, Node, Docker, general)
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vs/
+TestResults/
+
+# Node/React
+node_modules/
+build/
+dist/
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Environment & Secrets
+.env
+.env.*
+*.secret
+secrets/
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Database
+*.mdf
+*.ldf
+
+# Misc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+coverage/
+
+# Others
+*.pid
+*.seed
+*.bak
+*.tmp
