@@ -1,0 +1,5 @@
+# MongoDB backup (cron)
+0 2 * * * mongodump --uri="mongodb://mongo:27017" --out=/backups/mongo/$(date +\%F)
+
+# SQL Server backup (cron)
+0 3 * * * /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourPassword>" -Q "BACKUP DATABASE [ZestEats] TO DISK = N'/backups/sqlserver/ZestEats_$(date +\%F).bak'"

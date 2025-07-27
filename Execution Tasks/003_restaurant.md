@@ -2,34 +2,34 @@
 
 ## API Layer
 
-- [ ] Implement endpoints for restaurant registration and profile management
-- [ ] Implement GET /restaurants for listing and filtering
-- [ ] Implement health endpoints (/healthz, /readyz)
-- [ ] Implement gRPC endpoints for internal communication
+- [x] Implement endpoints for restaurant registration and profile management
+- [x] Implement GET /restaurants for listing and filtering
+- [x] Implement health endpoints (/healthz, /readyz)
+- [x] Implement gRPC endpoints for internal communication
 
 ## Domain Layer
 
-- [ ] Design Restaurant entity and filtering logic
-- [ ] Implement event publishing to Kafka for domain events
-- [ ] Implement idempotency keys for event deduplication
-- [ ] Implement saga compensation logic for distributed transactions
-- [ ] Implement timeouts and retries for inter-service calls
+- [x] Design Restaurant entity and filtering logic
+- [] Implement event publishing to Kafka for domain events
+- [] Implement idempotency keys for event deduplication
+- [] Implement saga compensation logic for distributed transactions
+- [] Implement timeouts and retries for inter-service calls
 
 ## Persistence Layer
 
-- [ ] Set up Restaurant table schema in SQL Server
-- [ ] Implement repository for restaurant CRUD operations
+- [] Set up Restaurant table schema in SQL Server
+- [x] Implement repository for restaurant CRUD operations
 
 ## Orphan Cleanup
 
-- [ ] Implement cron jobs for stale restaurants (if applicable)
+- [] Implement cron jobs for stale restaurants (if applicable)
 
 ## Security
 
-- [ ] Ensure secrets are managed via Kubernetes Secrets
+- [] Ensure secrets are managed via Kubernetes Secrets
 
 ## Testing
 
-- [ ] Write unit tests for restaurant profile logic
-- [ ] Write integration tests for restaurant listing/filtering
-- [ ] Write contract tests for restaurant service APIs
+- [] Write unit tests for restaurant profile logic
+- [] Write integration tests for restaurant listing/filtering
+- [] Write contract tests for restaurant service APIs

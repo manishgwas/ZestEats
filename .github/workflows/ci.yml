@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - name: Restore dependencies
+        run: dotnet restore ./services/auth/AuthService.csproj
+      - name: Build
+        run: dotnet build --no-restore ./services/auth/AuthService.csproj
+      - name: Test
+        run: echo "No tests yet"
+      - name: Docker Build
+        run: docker build -f docker/Dockerfile.auth -t zesteats-auth .
