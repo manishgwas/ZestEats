@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option csharp_namespace = "Restaurant.Grpc";
+
+service RestaurantService {
+  rpc GetRestaurant (GetRestaurantRequest) returns (GetRestaurantResponse);
+  rpc ListRestaurants (ListRestaurantsRequest) returns (ListRestaurantsResponse);
+  rpc RegisterRestaurant (RegisterRestaurantRequest) returns (RegisterRestaurantResponse);
+}
+
+message GetRestaurantRequest {
+  int32 id = 1;
+}
+
+message GetRestaurantResponse {
+  int32 id = 1;
+  string name = 2;
+  string address = 3;
+  string cuisine = 4;
+  bool isActive = 5;
+}
+
+message ListRestaurantsRequest {
+  string filter = 1;
+}
+
+message ListRestaurantsResponse {
+  repeated GetRestaurantResponse restaurants = 1;
+}
+
+message RegisterRestaurantRequest {
+  string name = 1;
+  string address = 2;
+  string cuisine = 3;
+}
+
+message RegisterRestaurantResponse {
+  int32 id = 1;
+}

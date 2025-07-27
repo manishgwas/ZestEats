@@ -24,6 +24,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapControllers();
-// app.MapGrpcService<Grpc.RestaurantGrpcService>();
+app.MapGrpcService<Restaurant.Grpc.RestaurantGrpcService>();
 
 app.Run();

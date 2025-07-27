@@ -1,0 +1,7 @@
+CREATE TABLE Restaurants (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(100) NOT NULL,
+    Address NVARCHAR(200) NOT NULL,
+    Cuisine NVARCHAR(50) NOT NULL,
+    IsActive BIT NOT NULL
+);

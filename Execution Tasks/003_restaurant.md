@@ -10,26 +10,26 @@
 ## Domain Layer
 
 - [x] Design Restaurant entity and filtering logic
-- [] Implement event publishing to Kafka for domain events
-- [] Implement idempotency keys for event deduplication
-- [] Implement saga compensation logic for distributed transactions
-- [] Implement timeouts and retries for inter-service calls
+- [x] Implement event publishing to Kafka for domain events
+- [x] Implement idempotency keys for event deduplication
+- [x] Implement saga compensation logic for distributed transactions
+- [x] Implement timeouts and retries for inter-service calls
 
 ## Persistence Layer
 
-- [] Set up Restaurant table schema in SQL Server
+- [x] Set up Restaurant table schema in SQL Server
 - [x] Implement repository for restaurant CRUD operations
 
 ## Orphan Cleanup
 
-- [] Implement cron jobs for stale restaurants (if applicable)
+- [x] Implement cron jobs for stale restaurants (if applicable)
 
 ## Security
 
-- [] Ensure secrets are managed via Kubernetes Secrets
+- [x] Ensure secrets are managed via Kubernetes Secrets
 
 ## Testing
 
-- [] Write unit tests for restaurant profile logic
-- [] Write integration tests for restaurant listing/filtering
-- [] Write contract tests for restaurant service APIs
+- [x] Write unit tests for restaurant profile logic
+- [x] Write integration tests for restaurant listing/filtering
+- [x] Write contract tests for restaurant service APIs
