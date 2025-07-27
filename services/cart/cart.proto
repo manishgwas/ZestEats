@@ -1,0 +1,36 @@
+syntax = "proto3";
+option csharp_namespace = "CartService.Grpc";
+
+service CartProto {
+  rpc AddOrUpdateCart (AddOrUpdateCartRequest) returns (CartReply);
+  rpc GetCart (GetCartRequest) returns (CartReply);
+  rpc ListCarts (ListCartsRequest) returns (ListCartsReply);
+}
+
+message CartReply {
+  string id = 1;
+  string userId = 2;
+  repeated CartItem items = 3;
+}
+
+message CartItem {
+  string id = 1;
+  string menuItemId = 2;
+  int32 quantity = 3;
+  double price = 4;
+}
+
+message AddOrUpdateCartRequest {
+  string userId = 1;
+  repeated CartItem items = 2;
+}
+
+message GetCartRequest {
+  string userId = 1;
+}
+
+message ListCartsRequest {}
+
+message ListCartsReply {
+  repeated CartReply carts = 1;
+}

@@ -2,34 +2,34 @@
 
 ## API Layer
 
-- [ ] Implement endpoints for menu CRUD (add, update, delete, list)
-- [ ] Implement GET /menus/{restaurantId}
-- [ ] Implement health endpoints (/healthz, /readyz)
-- [ ] Implement gRPC endpoints for internal communication
+- [x] Implement endpoints for menu CRUD (add, update, delete, list)
+- [x] Implement GET /menus/{restaurantId}
+- [x] Implement health endpoints (/healthz, /readyz)
+- [x] Implement gRPC endpoints for internal communication
 
 ## Domain Layer
 
-- [ ] Design Menu entity and validation logic
-- [ ] Implement event publishing to Kafka for domain events
-- [ ] Implement idempotency keys for event deduplication
-- [ ] Implement saga compensation logic for distributed transactions
-- [ ] Implement timeouts and retries for inter-service calls
+- [x] Design Menu entity and validation logic
+- [x] Implement event publishing to Kafka for domain events
+- [x] Implement idempotency keys for event deduplication
+- [x] Implement saga compensation logic for distributed transactions
+- [x] Implement timeouts and retries for inter-service calls
 
 ## Persistence Layer
 
-- [ ] Set up MongoDB collections for menus
-- [ ] Implement repository for menu operations
+- [x] Set up MongoDB collections for menus
+- [x] Implement repository for menu operations
 
 ## Orphan Cleanup
 
-- [ ] Implement cron jobs for stale menus (if applicable)
+- [x] Implement cron jobs for stale menus (if applicable)
 
 ## Security
 
-- [ ] Ensure secrets are managed via Kubernetes Secrets
+- [x] Ensure secrets are managed via Kubernetes Secrets
 
 ## Testing
 
-- [ ] Write unit tests for menu logic
-- [ ] Write integration tests for menu endpoints
-- [ ] Write contract tests for menu service APIs
+- [x] Write unit tests for menu logic
+- [x] Write integration tests for menu endpoints
+- [x] Write contract tests for menu service APIs
