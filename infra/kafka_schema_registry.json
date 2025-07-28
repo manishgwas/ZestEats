@@ -1,0 +1,5 @@
+{
+  "schema.registry.url": "http://zesteats-schema-registry:8081",
+  "basic.auth.credentials.source": "USER_INFO",
+  "basic.auth.user.info": "schema_registry_user:schema_registry_password"
+}

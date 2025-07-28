@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: order-orphan-cleanup
+spec:
+  schedule: "30 * * * *" # hourly, offset
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: cleanup
+              image: orderservice:latest
+              command: ["dotnet", "Order.OrphanCleanup.dll"]
+          restartPolicy: OnFailure

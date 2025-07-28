@@ -1,0 +1,10 @@
+CREATE TABLE Deliveries (
+    Id UNIQUEIDENTIFIER PRIMARY KEY,
+    OrderId NVARCHAR(100) NOT NULL,
+    Address NVARCHAR(255) NOT NULL,
+    Status NVARCHAR(50) NOT NULL,
+    AssignedAt DATETIME2 NOT NULL,
+    DeliveredAt DATETIME2 NULL,
+    CourierId NVARCHAR(100) NULL,
+    IdempotencyKey NVARCHAR(100) NULL
+);

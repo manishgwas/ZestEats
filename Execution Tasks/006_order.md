@@ -2,35 +2,35 @@
 
 ## API Layer
 
-- [ ] Implement POST /orders for order placement
-- [ ] Implement GET /orders/{id} for order status
-- [ ] Implement health endpoints (/healthz, /readyz)
-- [ ] Implement gRPC endpoints for internal communication
+- [x] Implement POST /orders for order placement
+- [x] Implement GET /orders/{id} for order status
+- [x] Implement health endpoints (/healthz, /readyz)
+- [x] Implement gRPC endpoints for internal communication
 
 ## Domain Layer
 
-- [ ] Design Order entity and lifecycle logic
-- [ ] Integrate with Payment and Delivery services via Kafka events
-- [ ] Implement event publishing to Kafka for domain events
-- [ ] Implement idempotency keys for event deduplication
-- [ ] Implement saga compensation logic for distributed transactions
-- [ ] Implement timeouts and retries for inter-service calls
+- [x] Design Order entity and lifecycle logic
+- [x] Integrate with Payment and Delivery services via Kafka events
+- [x] Implement event publishing to Kafka for domain events
+- [x] Implement idempotency keys for event deduplication
+- [x] Implement saga compensation logic for distributed transactions
+- [x] Implement timeouts and retries for inter-service calls
 
 ## Persistence Layer
 
-- [ ] Set up Order table schema in SQL Server
-- [ ] Implement repository for order operations
+- [x] Set up Order table schema in SQL Server
+- [x] Implement repository for order operations
 
 ## Orphan Cleanup
 
-- [ ] Implement cron jobs for stale/unpaid orders
+- [x] Implement cron jobs for stale/unpaid orders
 
 ## Security
 
-- [ ] Ensure secrets are managed via Kubernetes Secrets
+- [x] Ensure secrets are managed via Kubernetes Secrets
 
 ## Testing
 
-- [ ] Write unit tests for order lifecycle
-- [ ] Write integration tests for order placement and status
-- [ ] Write contract tests for order service APIs
+- [x] Write unit tests for order lifecycle
+- [x] Write integration tests for order placement and status
+- [x] Write contract tests for order service APIs

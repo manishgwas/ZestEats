@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: ntp
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      app: ntp
+  template:
+    metadata:
+      labels:
+        app: ntp
+    spec:
+      containers:
+        - name: ntp
+          image: cturra/ntp:latest
+          securityContext:
+            privileged: true
+          volumeMounts:
+            - name: host-time
+              mountPath: /etc/localtime
+              readOnly: true
+      volumes:
+        - name: host-time
+          hostPath:
+            path: /etc/localtime

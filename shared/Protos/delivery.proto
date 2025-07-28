@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option csharp_namespace = "DeliveryService.Grpc";
+
+service DeliveryProtoService {
+  rpc AssignDelivery (AssignDeliveryRequest) returns (DeliveryResponse);
+  rpc UpdateDeliveryStatus (UpdateDeliveryStatusRequest) returns (DeliveryResponse);
+  rpc GetDeliveryStatus (GetDeliveryStatusRequest) returns (DeliveryResponse);
+}
+
+message AssignDeliveryRequest {
+  string order_id = 1;
+  string address = 2;
+  string courier_id = 3;
+  string idempotency_key = 4;
+}
+
+message UpdateDeliveryStatusRequest {
+  string delivery_id = 1;
+  string status = 2;
+}
+
+message GetDeliveryStatusRequest {
+  string delivery_id = 1;
+}
+
+message DeliveryResponse {
+  string delivery_id = 1;
+  string status = 2;
+  string message = 3;
+}

@@ -26,8 +26,11 @@ builder.Services.AddRateLimiter(options => { /* configure as needed */ });
 
 var app = builder.Build();
 
+
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapReverseProxy();
+app.MapGet("/healthz", () => Results.Ok("Healthy"));
+app.MapGet("/readyz", () => Results.Ok("Ready"));
 
 app.Run();

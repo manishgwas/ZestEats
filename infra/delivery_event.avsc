@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "DeliveryEvent",
+  "namespace": "zesteats.events",
+  "fields": [
+    { "name": "deliveryId", "type": "string" },
+    { "name": "orderId", "type": "string" },
+    { "name": "status", "type": "string" },
+    { "name": "timestamp", "type": "long" }
+  ]
+}

@@ -1,0 +1,22 @@
+syntax = "proto3";
+option csharp_namespace = "OrderService.Grpc";
+
+service OrderProto {
+  rpc GetOrder (GetOrderRequest) returns (OrderReply);
+  rpc PlaceOrder (PlaceOrderRequest) returns (OrderReply);
+}
+
+message OrderReply {
+  string id = 1;
+  string userId = 2;
+  string status = 3;
+  string createdAt = 4;
+}
+
+message GetOrderRequest {
+  string id = 1;
+}
+
+message PlaceOrderRequest {
+  string userId = 1;
+}

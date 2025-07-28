@@ -10,7 +10,13 @@ namespace Restaurant.Kafka
 
         public KafkaEventPublisher(string bootstrapServers, string topic)
         {
-            var config = new ProducerConfig { BootstrapServers = bootstrapServers };
+            var config = new ProducerConfig {
+                BootstrapServers = bootstrapServers,
+                MessageTimeoutMs = 10000, // 10s
+                Acks = Acks.All,
+                EnableIdempotence = true,
+                RetryBackoffMs = 2000 // 2s
+            };
             _producer = new ProducerBuilder<string, string>(config).Build();
             _topic = topic;
         }

@@ -1,0 +1,22 @@
+syntax = "proto3";
+option csharp_namespace = "PaymentService.Grpc";
+
+service PaymentProto {
+  rpc GetPayment (GetPaymentRequest) returns (PaymentReply);
+  rpc InitiatePayment (InitiatePaymentRequest) returns (PaymentReply);
+}
+
+message PaymentReply {
+  string id = 1;
+  string orderId = 2;
+  string status = 3;
+  string createdAt = 4;
+}
+
+message GetPaymentRequest {
+  string orderId = 1;
+}
+
+message InitiatePaymentRequest {
+  string orderId = 1;
+}

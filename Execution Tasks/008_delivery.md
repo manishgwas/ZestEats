@@ -2,35 +2,35 @@
 
 ## API Layer
 
-- [ ] Implement endpoints for delivery assignment and status updates
-- [ ] Implement GET /deliveries/{id} for delivery status
-- [ ] Implement health endpoints (/healthz, /readyz)
-- [ ] Implement gRPC endpoints for internal communication
+- [x] Implement endpoints for delivery assignment and status updates
+- [x] Implement GET /deliveries/{id} for delivery status
+- [x] Implement health endpoints (/healthz, /readyz)
+- [x] Implement gRPC endpoints for internal communication
 
 ## Domain Layer
 
-- [ ] Design Delivery entity and assignment logic
-- [ ] Integrate with Order and Payment services via Kafka events
-- [ ] Implement event publishing to Kafka for domain events
-- [ ] Implement idempotency keys for event deduplication
-- [ ] Implement saga compensation logic for distributed transactions
-- [ ] Implement timeouts and retries for inter-service calls
+- [x] Design Delivery entity and assignment logic
+- [x] Integrate with Order and Payment services via Kafka events
+- [x] Implement event publishing to Kafka for domain events
+- [x] Implement idempotency keys for event deduplication
+- [x] Implement saga compensation logic for distributed transactions
+- [x] Implement timeouts and retries for inter-service calls
 
 ## Persistence Layer
 
-- [ ] Set up Delivery table schema in SQL Server
-- [ ] Implement repository for delivery operations
+- [x] Set up Delivery table schema in SQL Server
+- [x] Implement repository for delivery operations
 
 ## Orphan Cleanup
 
-- [ ] Implement cron jobs for stale/unassigned deliveries
+- [x] Implement cron jobs for stale/unassigned deliveries
 
 ## Security
 
-- [ ] Ensure secrets are managed via Kubernetes Secrets
+- [x] Ensure secrets are managed via Kubernetes Secrets
 
 ## Testing
 
-- [ ] Write unit tests for delivery logic
-- [ ] Write integration tests for delivery assignment and status
-- [ ] Write contract tests for delivery service APIs
+- [x] Write unit tests for delivery logic
+- [x] Write integration tests for delivery assignment and status
+- [x] Write contract tests for delivery service APIs

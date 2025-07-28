@@ -1,0 +1,11 @@
+groups:
+  - name: zest-eats-health
+    rules:
+      - alert: ServiceDown
+        expr: probe_success{job="zesteats-health"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Service {{ $labels.instance }} is down"
+          description: "Health endpoint failed for {{ $labels.instance }}."

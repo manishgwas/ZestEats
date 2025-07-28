@@ -1,0 +1,13 @@
+scrape_configs:
+  - job_name: "zesteats-health"
+    metrics_path: /healthz
+    static_configs:
+      - targets:
+          - "authservice:80"
+          - "cartservice:80"
+          - "orderservice:80"
+          - "paymentservice:80"
+          - "restaurantservice:80"
+          - "deliveryservice:80"
+          - "menuservice:80"
+          - "gatewayservice:80"

@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cart-orphan-cleanup
+spec:
+  schedule: "0 * * * *" # hourly
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: cleanup
+              image: cartservice:latest
+              command: ["dotnet", "Cart.OrphanCleanup.dll"]
+          restartPolicy: OnFailure
